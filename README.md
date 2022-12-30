@@ -7,13 +7,13 @@
 version: '3.7'
 
 services:
-  ui1:
+  proxy:
     image: nexryai/merino-proxy:latest
     restart: always
     ports:
       - "1080:1080"
     volumes:
-      - ./users.csv:/app/users.csv
+      - ./users.csv:/app/users.csv:ro
 ```
 
 ### `users.csv`
